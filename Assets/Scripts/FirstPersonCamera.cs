@@ -6,7 +6,7 @@ public class FirstPersonCamera : MonoBehaviour
 {
     public Vector2 sensitivityVector = Vector2.one;
 
-    public Transform orientation;
+    public Transform playerTransform;
 
     private Vector2 rotationVector = Vector2.zero;
 
@@ -33,7 +33,7 @@ public class FirstPersonCamera : MonoBehaviour
         rotationVector.x = Mathf.Clamp(rotationVector.x, -90f, 90f);
 
         transform.rotation = Quaternion.Euler(rotationVector.x, rotationVector.y, 0);
-        orientation.rotation = Quaternion.Euler(0, rotationVector.y, 0);
+        playerTransform.rotation = transform.rotation;//Quaternion.Euler(rot, rotationVector.y, 0);
 
     
     }
