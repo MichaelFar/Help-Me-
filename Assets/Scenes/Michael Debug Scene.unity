@@ -245,7 +245,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252272735}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 7fc5c1a666f6ab14cb9e30be11577c44, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -281,7 +281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 081e12e589352014fab08d8d782324f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -335,7 +335,7 @@ Rigidbody:
   m_GameObject: {fileID: 252272735}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -350,7 +350,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 1
+  m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &252272741
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 252272740}
   destinationObject: {fileID: 1160359975}
-  distanceLimit: 10
-  dragForce: 3
+  distanceLimit: 3
+  dragForce: 4
 --- !u!4 &1160359975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5041016263246706413, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
@@ -488,6 +488,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3853314910074687126, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
+      propertyPath: sensitivityVector.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853314910074687126, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
+      propertyPath: sensitivityVector.y
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572276117011667962, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5041016263246706413, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -531,6 +543,10 @@ PrefabInstance:
     - target: {fileID: 5196472366778378545, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
       propertyPath: m_Name
       value: PlayerTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5241684875226576107, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
+      propertyPath: field of view
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,6 +11,8 @@ public class FirstPersonCamera : MonoBehaviour
     private Vector2 rotationVector = Vector2.zero;
 
     
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +34,9 @@ public class FirstPersonCamera : MonoBehaviour
 
         rotationVector.x = Mathf.Clamp(rotationVector.x, -90f, 90f);
 
-        transform.rotation = Quaternion.Euler(rotationVector.x, rotationVector.y, 0);
-        playerTransform.rotation = transform.rotation;//Quaternion.Euler(rot, rotationVector.y, 0);
+        //transform.rotation = Quaternion.Euler(rotationVector.x, rotationVector.y, 0);
+        playerTransform.rotation = Quaternion.Euler(rotationVector.x, rotationVector.y, 0);//Quaternion.Euler(rot, rotationVector.y, 0);
 
-    
+
     }
 }

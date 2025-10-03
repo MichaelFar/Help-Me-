@@ -20,10 +20,9 @@ public class FPCharacterController : MonoBehaviour
 
         Vector3 move_direction = (transform.right * x) + (transform.forward * z);
         move_direction = move_direction.normalized;
-        if(move_direction != Vector3.zero)
-        {
-            print(move_direction * speed);
-        }
+
+        
+
         controller.Move(move_direction * speed * Time.deltaTime);
     }
 }

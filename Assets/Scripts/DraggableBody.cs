@@ -11,6 +11,9 @@ public class DraggableBody : MonoBehaviour
     public Transform destinationObject;
     public float distanceLimit = 5.0f;
     public float dragForce = 3.0f;
+
+    public Material damagedMaterial;
+    public Material fullHealthMaterial;
     void Start()
     {
        
@@ -30,5 +33,9 @@ public class DraggableBody : MonoBehaviour
             rb.AddForce(direction_to_object * dragForce);
             //rb.MovePosition(destinationObject.position);
         }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        print("Testing collision on rigid body");
     }
 }
