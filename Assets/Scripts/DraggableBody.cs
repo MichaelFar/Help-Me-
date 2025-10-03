@@ -8,12 +8,17 @@ public class DraggableBody : MonoBehaviour
     // Start is called before the first frame update
 
     public Rigidbody rb;
+    public Renderer rend;
     public Transform destinationObject;
     public float distanceLimit = 5.0f;
     public float dragForce = 3.0f;
 
     public Material damagedMaterial;
     public Material fullHealthMaterial;
+
+    //Proto Health System, will be changed for per material and body part
+    private float healthLevel = 0.0f; //Healthy at 0.0, might change logic to reverse if unintuitive
+    public float damageFromImpact = 0.25f;
     void Start()
     {
        
@@ -37,5 +42,7 @@ public class DraggableBody : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         print("Testing collision on rigid body");
+        healthLevel += damageFromImpact;
+        rend.material.Lerp(fullHealthMaterial, damagedMaterial, healthLevel);
     }
 }

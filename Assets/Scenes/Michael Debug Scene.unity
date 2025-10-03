@@ -350,7 +350,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &252272741
@@ -366,9 +366,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 252272740}
+  rend: {fileID: 252272737}
   destinationObject: {fileID: 1160359975}
   distanceLimit: 3
   dragForce: 4
+  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
+  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
+  damageFromImpact: 0.25
 --- !u!4 &1160359975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5041016263246706413, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
