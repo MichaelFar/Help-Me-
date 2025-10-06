@@ -15,9 +15,10 @@ public class DraggableBody : MonoBehaviour
 
     public Material damagedMaterial;
     public Material fullHealthMaterial;
+    public HealthBar healthBar;
 
     //Proto Health System, will be changed for per material and body part
-    private float healthLevel = 0.0f; //Healthy at 0.0, might change logic to reverse if unintuitive
+    private float healthLevel = 0.0f; //Most healthy at 0.0, might change logic to reverse if unintuitive
     public float damageFromImpact = 0.25f;
     void Start()
     {
@@ -44,5 +45,6 @@ public class DraggableBody : MonoBehaviour
         print("Testing collision on rigid body");
         healthLevel += damageFromImpact;
         rend.material.Lerp(fullHealthMaterial, damagedMaterial, healthLevel);
+        healthBar.SetHealthBarValue(1.0f - healthLevel);
     }
 }
