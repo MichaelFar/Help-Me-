@@ -17,4 +17,5 @@ public class HealthBar : MonoBehaviour
     {
         healthBarImage.fillAmount = new_health;
     }
+
 }
