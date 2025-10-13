@@ -42,7 +42,7 @@ public class DraggableBody : MonoBehaviour
         {
 
             rb.AddForce(direction_to_object1 * dragForce * distance_to_object1);
-            
+
             //rb.MovePosition(destinationObject.position);
         }
 
