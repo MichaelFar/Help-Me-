@@ -34,7 +34,7 @@ public class PauseMenu : MonoBehaviour
                     Time.timeScale = 1;
 
                 }
-                print(value);
+                //print(value);
                 GetComponent<Canvas>().enabled = value;
                 
             }
