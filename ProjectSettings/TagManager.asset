@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NearCameraLimit
   - FarCameraLimit
+  - DONOTTAKEDAMAGE
   layers:
   - Default
   - TransparentFX

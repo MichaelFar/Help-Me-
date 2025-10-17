@@ -16,6 +16,7 @@ public class DraggableBody : MonoBehaviour
     public float distanceLimit2 = 5.0f;
     public float dragForce = 3.0f;
 
+    private float collisionDamageCoolDownCounter = 0.0f;
     
 
     //Proto Health System, will be changed for per material and body part
@@ -29,23 +30,25 @@ public class DraggableBody : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        float distance_to_object1 = Vector3.Distance(transform.position, destinationObject1.position);
-        Vector3 direction_to_object1 = destinationObject1.position - transform.position;
 
-        
-
-        direction_to_object1 = direction_to_object1.normalized;
-        
-        
-
-        if (distance_to_object1 > distanceLimit1)
+        collisionDamageCoolDownCounter += Time.deltaTime;
+        if (destinationObject1 != null)
         {
+            float distance_to_object1 = Vector3.Distance(transform.position, destinationObject1.position);
+            Vector3 direction_to_object1 = destinationObject1.position - transform.position;
 
-            rb.AddForce(direction_to_object1 * dragForce * distance_to_object1);
 
-            //rb.MovePosition(destinationObject.position);
+
+            direction_to_object1 = direction_to_object1.normalized;
+
+            if (distance_to_object1 > distanceLimit1)
+            {
+
+                rb.AddForce(direction_to_object1 * dragForce * distance_to_object1);
+
+                //rb.MovePosition(destinationObject.position);
+            }
         }
-
         if (destinationObject2 != null)
         {
             float distance_to_object2 = Vector3.Distance(transform.position, destinationObject2.position);
@@ -53,9 +56,9 @@ public class DraggableBody : MonoBehaviour
 
             direction_to_object2 = direction_to_object2.normalized;
 
-            if (distance_to_object2 > distanceLimit2)
+            if (distance_to_object2 > distanceLimit2 && collisionDamageCoolDownCounter > 1.0f)
             {
-
+                collisionDamageCoolDownCounter = 0.0f;
                 rb.AddForce(direction_to_object2 * dragForce * distance_to_object2);
                 //rb.MovePosition(destinationObject.position);
             }
@@ -64,7 +67,12 @@ public class DraggableBody : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         print("Testing collision on rigid body");
-        damageLerper.DamageMesh(GetMagnitudeOfCollison());
+        print("Collided with " + collision.gameObject);
+        if(collision.gameObject.tag != "DONOTTAKEDAMAGE")
+     
+        { 
+            damageLerper.DamageMesh(GetMagnitudeOfCollison()); 
+        }
 
     }
     private float GetMagnitudeOfCollison()

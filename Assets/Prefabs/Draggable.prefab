@@ -125,12 +125,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 5831357085432108744}
   rend: {fileID: 3408585917330042159}
-  destinationObject: {fileID: 0}
-  distanceLimit: 3
+  damageLerper: {fileID: 2255344714797701927}
+  destinationObject1: {fileID: 0}
+  destinationObject2: {fileID: 0}
+  distanceLimit1: 0.9
+  distanceLimit2: 5
   dragForce: 4
-  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
-  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 902977851596160764}
   damageFromImpact: 0.25
 --- !u!114 &2255344714797701927
 MonoBehaviour:
@@ -144,10 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafe69dd56aa53142abb157c3f9b78dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  damagedMaterial: {fileID: 0}
-  fullHealthMaterial: {fileID: 0}
-  healthBar: {fileID: 0}
+  rend: {fileID: 3408585917330042159}
+  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
+  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
+  healthBar: {fileID: 902977851596160764}
+  forceThreshold: 3
+  maxHealthLevel: 100
 --- !u!54 &5831357085432108744
 Rigidbody:
   m_ObjectHideFlags: 0
