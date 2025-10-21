@@ -8,7 +8,7 @@ public class DraggableBody : MonoBehaviour
     // Start is called before the first frame update
 
     public Rigidbody rb;
-    public Renderer rend;
+    
     public CollisionDamageLerper damageLerper;
     public Transform destinationObject1;
     public Transform destinationObject2;
@@ -36,41 +36,48 @@ public class DraggableBody : MonoBehaviour
         {
             float distance_to_object1 = Vector3.Distance(transform.position, destinationObject1.position);
             Vector3 direction_to_object1 = destinationObject1.position - transform.position;
+            float direction_ratio1 = 1.0f - (distanceLimit1 / distance_to_object1);
 
-
-
+            direction_ratio1 = Mathf.Clamp(distanceLimit1, distanceLimit1, direction_ratio1);
             direction_to_object1 = direction_to_object1.normalized;
 
-            if (distance_to_object1 > distanceLimit1)
-            {
+            
 
-                rb.AddForce(direction_to_object1 * dragForce * distance_to_object1);
+            //if (distance_to_object1 > distanceLimit1)
+            //{
+
+                rb.AddForce(direction_to_object1 * dragForce * direction_ratio1);// * direction_ratio1);// * distance_to_object1);
 
                 //rb.MovePosition(destinationObject.position);
-            }
+            //}
         }
         if (destinationObject2 != null)
         {
             float distance_to_object2 = Vector3.Distance(transform.position, destinationObject2.position);
             Vector3 direction_to_object2 = destinationObject2.position - transform.position;
 
+            float direction_ratio2 = 1.0f - (distanceLimit2 / distance_to_object2);
+
+            direction_ratio2 = Mathf.Clamp(distanceLimit2, distanceLimit2, direction_ratio2);
+            print("Direction ratio2 is " + direction_ratio2);
             direction_to_object2 = direction_to_object2.normalized;
 
-            if (distance_to_object2 > distanceLimit2 && collisionDamageCoolDownCounter > 1.0f)
-            {
-                collisionDamageCoolDownCounter = 0.0f;
-                rb.AddForce(direction_to_object2 * dragForce * distance_to_object2);
+            //if (distance_to_object2 > distanceLimit2)// && collisionDamageCoolDownCounter > 1.0f)
+            //{
+
+                rb.AddForce(direction_to_object2 * dragForce * direction_ratio2);// * direction_ratio2);// * distance_to_object2);
                 //rb.MovePosition(destinationObject.position);
-            }
+            //}
         }
     }
     private void OnCollisionEnter(Collision collision)
     {
         print("Testing collision on rigid body");
         print("Collided with " + collision.gameObject);
-        if(collision.gameObject.tag != "DONOTTAKEDAMAGE")
+        if(collision.gameObject.tag != "DONOTTAKEDAMAGE" && collisionDamageCoolDownCounter > 1.0f)
      
-        { 
+        {
+            collisionDamageCoolDownCounter = 0.0f;
             damageLerper.DamageMesh(GetMagnitudeOfCollison()); 
         }
 
