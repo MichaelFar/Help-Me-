@@ -314,6 +314,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 1833446758661825309}
+  limbArray:
+  - {fileID: 3308846581699186710}
+  - {fileID: 6581037867889856674}
+  - {fileID: 4272474114730151978}
+  - {fileID: 3722640992420719683}
+  - {fileID: 6612220573797765958}
+  - {fileID: 5156219185396802706}
 --- !u!1001 &3226622033426646982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -537,15 +544,15 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2983041446379219769}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2301397285443573774}
     - targetCorrespondingSourceObject: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9169640965897968386}
     - targetCorrespondingSourceObject: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7990153743719437491}
-    - targetCorrespondingSourceObject: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8957114491799415660}
     - targetCorrespondingSourceObject: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 43602140541648927}
@@ -555,6 +562,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2128576809441311874}
+    - targetCorrespondingSourceObject: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4272474114730151978}
+    - targetCorrespondingSourceObject: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4522086490399927178}
     - targetCorrespondingSourceObject: {fileID: -6170625038081293824, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 160037935164606312}
@@ -564,9 +577,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6170625038081293824, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6460894876742586482}
-    - targetCorrespondingSourceObject: {fileID: -6170625038081293824, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2718097761986330939}
     - targetCorrespondingSourceObject: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6436216679872742659}
@@ -576,6 +586,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1049000245489564325}
+    - targetCorrespondingSourceObject: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6612220573797765958}
+    - targetCorrespondingSourceObject: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2171147647071613501}
     - targetCorrespondingSourceObject: {fileID: -4332706925441422008, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1769341994220977695}
@@ -585,9 +601,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4332706925441422008, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8045017060707792777}
-    - targetCorrespondingSourceObject: {fileID: -4332706925441422008, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4105548539781811338}
     - targetCorrespondingSourceObject: {fileID: -203856693384778745, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5715950205147662376}
@@ -702,7 +715,7 @@ Rigidbody:
   m_GameObject: {fileID: 359800945826525698}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -905,24 +918,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &2718097761986330939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475915484115535302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eafe69dd56aa53142abb157c3f9b78dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: {fileID: 6859740362602101087}
-  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
-  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 8649361036312908189}
-  forceThreshold: 3
-  maxHealthLevel: 100
 --- !u!1 &523055667478007275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -960,7 +955,7 @@ Rigidbody:
   m_GameObject: {fileID: 523055667478007275}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1024,6 +1019,44 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4272474114730151978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523055667478007275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafe69dd56aa53142abb157c3f9b78dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 6859740362602101087}
+  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
+  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
+  healthBar: {fileID: 0}
+  forceThreshold: 3
+  maxHealthLevel: 100
+--- !u!114 &4522086490399927178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523055667478007275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7d3187ec33c274ca26b21927b78ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1231425959622095430}
+  damageLerper: {fileID: 4272474114730151978}
+  destinationObject1: {fileID: 0}
+  destinationObject2: {fileID: 0}
+  distanceLimit1: 5
+  distanceLimit2: 5
+  dragForce: 3
+  damageFromImpact: 0.25
 --- !u!1 &819561648371140043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6370085079684087283, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -1061,7 +1094,7 @@ Rigidbody:
   m_GameObject: {fileID: 819561648371140043}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1130,6 +1163,23 @@ SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4418834999246775707, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
   m_PrefabInstance: {fileID: 3226622033426646982}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2307578542060550807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+  m_PrefabInstance: {fileID: 3226622033426646982}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2301397285443573774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2307578542060550807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d329891e81c614b991040f6f0b81a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2576695846329702860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -1144,7 +1194,7 @@ Rigidbody:
   m_GameObject: {fileID: 2576695846329702860}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1183,24 +1233,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.51929504
   m_Center: {x: 8.739749e-15, y: 0.499831, z: 1.9709707e-12}
---- !u!114 &8957114491799415660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2576695846329702860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eafe69dd56aa53142abb157c3f9b78dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: {fileID: 2761404503372617396}
-  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
-  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 8649361036312908189}
-  forceThreshold: 3
-  maxHealthLevel: 100
 --- !u!137 &2761404503372617396 stripped
 SkinnedMeshRenderer:
   m_CorrespondingSourceObject: {fileID: -8460793209488387726, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -1243,7 +1275,7 @@ Rigidbody:
   m_GameObject: {fileID: 3235790933924628799}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1344,7 +1376,7 @@ Rigidbody:
   m_GameObject: {fileID: 3375555533237994880}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1465,7 +1497,7 @@ Rigidbody:
   m_GameObject: {fileID: 5903237032908352449}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1786,7 +1818,7 @@ Rigidbody:
   m_GameObject: {fileID: 8005255699349662350}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1850,24 +1882,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &4105548539781811338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8005255699349662350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eafe69dd56aa53142abb157c3f9b78dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: {fileID: 1267086690887066205}
-  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
-  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 8649361036312908189}
-  forceThreshold: 3
-  maxHealthLevel: 100
 --- !u!1 &8785825116682924877 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -1905,7 +1919,7 @@ Rigidbody:
   m_GameObject: {fileID: 8785825116682924877}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 30
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1969,3 +1983,41 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &6612220573797765958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785825116682924877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eafe69dd56aa53142abb157c3f9b78dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 1267086690887066205}
+  damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
+  fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
+  healthBar: {fileID: 0}
+  forceThreshold: 3
+  maxHealthLevel: 100
+--- !u!114 &2171147647071613501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785825116682924877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c7d3187ec33c274ca26b21927b78ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6940348853653735920}
+  damageLerper: {fileID: 6612220573797765958}
+  destinationObject1: {fileID: 0}
+  destinationObject2: {fileID: 0}
+  distanceLimit1: 5
+  distanceLimit2: 5
+  dragForce: 3
+  damageFromImpact: 0.25
