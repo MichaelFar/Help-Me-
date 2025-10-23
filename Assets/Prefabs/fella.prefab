@@ -854,7 +854,7 @@ Rigidbody:
   m_GameObject: {fileID: 475915484115535302}
   serializedVersion: 4
   m_Mass: 0.1
-  m_Drag: 6
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   rend: {fileID: 6859740362602101087}
   damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
   fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
 --- !u!114 &4522086490399927178
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   rend: {fileID: 2761404503372617396}
   damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
   fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
 --- !u!4 &6086657811800618560 stripped
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   rend: {fileID: 1267086690887066205}
   damagedMaterial: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
   fullHealthMaterial: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
 --- !u!114 &2171147647071613501

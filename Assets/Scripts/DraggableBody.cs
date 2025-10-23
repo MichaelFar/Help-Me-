@@ -65,10 +65,19 @@ public class DraggableBody : MonoBehaviour
         print("Testing collision on rigid body");
         print("Collided with " + collision.gameObject);
         if(collision.gameObject.tag != "DONOTTAKEDAMAGE" && collisionDamageCoolDownCounter > 1.0f)
-     
         {
-            collisionDamageCoolDownCounter = 0.0f;
-            damageLerper.DamageMesh(GetMagnitudeOfCollison()); 
+            if(collision.gameObject.tag == "INSTANTKILL")
+            {
+                print("Limb instant killed");
+                collisionDamageCoolDownCounter = 0.0f;
+                damageLerper.DamageMesh(1000000000.0f);
+            }
+            else
+            {
+                collisionDamageCoolDownCounter = 0.0f;
+                damageLerper.DamageMesh(GetMagnitudeOfCollison());
+            }
+                
         }
 
     }

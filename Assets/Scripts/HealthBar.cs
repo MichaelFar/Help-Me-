@@ -19,6 +19,7 @@ public class HealthBar : MonoBehaviour
 
     public void DamageHealthBarValue(float damage_amount)
     {
+        print("Incoming damage is " + damage_amount);
         healthBarImage.fillAmount -= damage_amount / totalHealth;
         print("Health bar fill amount is now " + healthBarImage.fillAmount);
     }
