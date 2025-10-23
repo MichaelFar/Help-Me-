@@ -203,6 +203,7 @@ MonoBehaviour:
   - {fileID: 5497843044501265074}
   - {fileID: 0}
   lengthOfRope: 2
+  ropeForce: 100
 --- !u!1 &6579470445755915483
 GameObject:
   m_ObjectHideFlags: 0

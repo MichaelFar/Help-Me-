@@ -389,6 +389,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
+    - target: {fileID: -8460793209488387726, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
+    - target: {fileID: -7733303460961341282, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: -7657966619581158213, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
@@ -433,6 +441,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
+    - target: {fileID: -3540725318260445992, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
@@ -461,6 +473,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
+    - target: {fileID: -329340364626206919, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: -290750445479886849, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
@@ -513,6 +529,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
+    - target: {fileID: 4418834999246775707, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: 5465940246521907071, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.54
@@ -521,6 +541,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
+    - target: {fileID: 8355850933822209689, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: 8700783698680967558, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.03

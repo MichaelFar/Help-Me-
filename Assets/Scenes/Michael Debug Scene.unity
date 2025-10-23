@@ -290,42 +290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: spike
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3489906879055906550, guid: 92704a0fe4709f347b101c62ed36b3c4, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5664236136062671932, guid: 92704a0fe4709f347b101c62ed36b3c4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 984800028}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92704a0fe4709f347b101c62ed36b3c4, type: 3}
---- !u!1 &984800022 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5664236136062671932, guid: 92704a0fe4709f347b101c62ed36b3c4, type: 3}
-  m_PrefabInstance: {fileID: 984800021}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &984800028
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984800022}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9188603553798411242, guid: 77f0c9395ec7d034694b78974889d695, type: 3}
 --- !u!4 &1160359975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2603254105554694587, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
@@ -781,6 +750,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser
       objectReference: {fileID: 0}
+    - target: {fileID: 2216458170450371299, guid: 530f1446f097a884fb0f1ab98b484677, type: 3}
+      propertyPath: m_TagString
+      value: INSTANTKILL
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014444231146782364, guid: 530f1446f097a884fb0f1ab98b484677, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014444231146782364, guid: 530f1446f097a884fb0f1ab98b484677, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8017736074702954866, guid: 530f1446f097a884fb0f1ab98b484677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.2117
@@ -1053,18 +1034,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1267086690887066205, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: 2307578542060550807, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
       propertyPath: m_Name
       value: fella
       objectReference: {fileID: 0}
-    - target: {fileID: 2761404503372617396, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: 2892277436544322760, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
       propertyPath: currentCamera
       value: 
@@ -1113,22 +1086,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4065214296584468312, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-    - target: {fileID: 6317056084697274623, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-    - target: {fileID: 6859740362602101087, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
-    - target: {fileID: 7069405333206248222, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: 8378939061613517829, guid: ce19eea2f0b7172428520ac94bfe28d4, type: 3}
       propertyPath: destinationObject1
       value: 
@@ -1149,10 +1106,6 @@ PrefabInstance:
     - target: {fileID: 1181900286478567882, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
       propertyPath: m_Name
       value: PlayerParent
-      objectReference: {fileID: 0}
-    - target: {fileID: 3414857097383371963, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
-      propertyPath: ropeForce
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3414857097383371963, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
       propertyPath: connectedBodies.Array.data[3]

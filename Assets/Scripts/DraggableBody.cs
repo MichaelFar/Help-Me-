@@ -62,11 +62,22 @@ public class DraggableBody : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        ApplyDamage(collision.gameObject);
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        ApplyDamage(other.gameObject);
+    }
+
+    void ApplyDamage(GameObject damage_object)
+    {
         print("Testing collision on rigid body");
-        print("Collided with " + collision.gameObject);
-        if(collision.gameObject.tag != "DONOTTAKEDAMAGE" && collisionDamageCoolDownCounter > 1.0f)
+        print("Collided with " + damage_object.gameObject);
+        if (damage_object.gameObject.tag != "DONOTTAKEDAMAGE" && collisionDamageCoolDownCounter > 1.0f)
         {
-            if(collision.gameObject.tag == "INSTANTKILL")
+            if (damage_object.gameObject.tag == "INSTANTKILL")
             {
                 print("Limb instant killed");
                 collisionDamageCoolDownCounter = 0.0f;
@@ -77,9 +88,8 @@ public class DraggableBody : MonoBehaviour
                 collisionDamageCoolDownCounter = 0.0f;
                 damageLerper.DamageMesh(GetMagnitudeOfCollison());
             }
-                
-        }
 
+        }
     }
     private float GetMagnitudeOfCollison()
     {
