@@ -11,9 +11,11 @@ public class RopeManager : MonoBehaviour
     public DraggableBody[] connectedBodies;
 
     public float lengthOfRope = 3.0f;
+    public float ropeForce = 1.0f;
     void Start()
     {
         SetRopeLength();
+        SetRopeForce();
     }
 
     // Update is called once per frame
@@ -34,5 +36,16 @@ public class RopeManager : MonoBehaviour
         }
         
         
+    }
+    void SetRopeForce()
+    {
+        //float individual_length = lengthOfRope / (float)connectedBodies.Length;//Replace with dynamic number of rope segments
+
+        foreach (DraggableBody i in connectedBodies)
+        {
+            i.dragForce = ropeForce;
+            //i.distanceLimit2 = individual_length;
+
+        }
     }
 }

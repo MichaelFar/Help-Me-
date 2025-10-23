@@ -38,7 +38,7 @@ public class DraggableBody : MonoBehaviour
             Vector3 direction_to_object1 = destinationObject1.position - transform.position;
             float direction_ratio1 = 1.0f - (distanceLimit1 / distance_to_object1);// Remember this for future implementations
 
-            direction_ratio1 = Mathf.Clamp(distanceLimit1, distanceLimit1, direction_ratio1);//Remember this for future implementations
+            direction_ratio1 = Mathf.Clamp(distanceLimit1, distanceLimit1, direction_ratio1 * 1.3f);//Remember this for future implementations
             direction_to_object1 = direction_to_object1.normalized;
 
             rb.AddForce(direction_to_object1 * dragForce * direction_ratio1);// * direction_ratio1);// * distance_to_object1);
@@ -52,7 +52,7 @@ public class DraggableBody : MonoBehaviour
 
             float direction_ratio2 = 1.0f - (distanceLimit2 / distance_to_object2);
 
-            direction_ratio2 = Mathf.Clamp(distanceLimit2, distanceLimit2, direction_ratio2);
+            direction_ratio2 = Mathf.Clamp(distanceLimit2, distanceLimit2, direction_ratio2 * 1.3f);
             print("Direction ratio2 is " + direction_ratio2);
             direction_to_object2 = direction_to_object2.normalized;
 
