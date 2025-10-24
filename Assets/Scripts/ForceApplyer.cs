@@ -25,15 +25,12 @@ public class ForceApplyer : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (draggablesInVolume.Capacity > 0 && timer >= forceCooldownSec)
+        foreach (DraggableBody i in draggablesInVolume)
         {
-            timer = 0.0f;
-            foreach (DraggableBody i in draggablesInVolume)
-            {
-                ApplyForceToDraggable(i);
+            ApplyForceToDraggable(i);
 
-            }
         }
+        
     }
     
     private void OnTriggerEnter(Collider other)
@@ -62,7 +59,7 @@ public class ForceApplyer : MonoBehaviour
     {
         Vector3 direction_to_fan = transform.eulerAngles.normalized;
         direction_to_fan = direction_to_fan.normalized;
-        draggable.GetComponent<Rigidbody>().AddForce(direction_to_fan * forceMagnitude);
+        draggable.GetComponent<Rigidbody>().AddForce(direction_to_fan * forceMagnitude * Time.deltaTime);
         print("Applying force to " + draggable.gameObject);
     }
 }
