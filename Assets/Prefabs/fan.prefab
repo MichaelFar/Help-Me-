@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e202738603b1d448e1eb57227107dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceMagnitude: 25
+  forceMagnitude: 300
   forceCooldownSec: 0.1
 --- !u!1 &8689397026330139562
 GameObject:

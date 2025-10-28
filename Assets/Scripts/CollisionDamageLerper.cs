@@ -52,8 +52,25 @@ public class CollisionDamageLerper : MonoBehaviour
             float normalized_health = currentHealthLevel / maxHealthLevel;
             rend.material.Lerp(damagedMaterial, fullHealthMaterial, normalized_health);
             if (healthBar != null && currentHealthLevel >= 0.0f)
+            {
                 healthBar.DamageHealthBarValue(Mathf.Clamp(damage_from_impact, 0.0f, maxHealthLevel));
+            }
+                
 
+        }
+    }
+    public void HealMesh(float heal_amount)
+    {
+        currentHealthLevel += heal_amount;
+        currentHealthLevel = Math.Clamp(currentHealthLevel, 0.0f, maxHealthLevel);
+
+
+        float normalized_health = currentHealthLevel / maxHealthLevel;
+
+        rend.material.Lerp(damagedMaterial, fullHealthMaterial, normalized_health);
+        if (healthBar != null)
+        { 
+            healthBar.HealHealthBar(Mathf.Clamp(heal_amount, 0.0f, maxHealthLevel)); 
         }
     }
     
