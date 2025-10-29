@@ -37,7 +37,7 @@ public class CollisionDamageLerper : MonoBehaviour
    
     public void DamageMesh(float damage_from_impact)
     {
-        if (damage_from_impact > forceThreshold && !isDead)
+        if (damage_from_impact > forceThreshold)
         {
             currentHealthLevel -= damage_from_impact;
 

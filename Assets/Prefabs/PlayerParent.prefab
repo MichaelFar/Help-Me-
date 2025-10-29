@@ -586,6 +586,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
+    - target: {fileID: 6284449682833409223, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284449682833409223, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8730591461804071157, guid: ee851ca2f2d90af448ac17872afdd567, type: 3}
@@ -648,7 +656,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360edc079be2ac343832b93ff0ded521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointVolumes: []
+  checkpointVolumes:
+  - {fileID: 0}
 --- !u!1001 &8475270007774600797
 PrefabInstance:
   m_ObjectHideFlags: 0

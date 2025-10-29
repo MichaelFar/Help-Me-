@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasReached: 0
-  myManager: {fileID: 0}
+  myManager: {fileID: 8266868926680095257}
 --- !u!65 &645250208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1384,10 +1384,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 687556809}
     - target: {fileID: 3478710661225818871, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
-      propertyPath: checkpointVolumes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3478710661225818871, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
       propertyPath: checkpointVolumes.Array.data[0]
       value: 
       objectReference: {fileID: 645250207}
@@ -1440,6 +1436,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
+--- !u!114 &8266868926680095257 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3478710661225818871, guid: 9e44edb94cb4c9c418c5cc1ca00986d3, type: 3}
+  m_PrefabInstance: {fileID: 8266868926680095254}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360edc079be2ac343832b93ff0ded521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

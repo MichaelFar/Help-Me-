@@ -60,6 +60,6 @@ public class ForceApplyer : MonoBehaviour
         Vector3 direction_to_fan = transform.eulerAngles.normalized;
         direction_to_fan = direction_to_fan.normalized;
         draggable.GetComponent<Rigidbody>().AddForce(direction_to_fan * forceMagnitude * Time.deltaTime);
-        print("Applying force to " + draggable.gameObject);
+        //print("Applying force to " + draggable.gameObject);
     }
 }

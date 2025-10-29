@@ -53,7 +53,7 @@ public class DraggableBody : MonoBehaviour
             float direction_ratio2 = 1.0f - (distanceLimit2 / distance_to_object2);
 
             direction_ratio2 = Mathf.Clamp(distanceLimit2, distanceLimit2, direction_ratio2 * 1.3f);
-            print("Direction ratio2 is " + direction_ratio2);
+            //print("Direction ratio2 is " + direction_ratio2);
             direction_to_object2 = direction_to_object2.normalized;
 
             rb.AddForce(direction_to_object2 * dragForce * direction_ratio2);// * direction_ratio2);// * distance_to_object2);
@@ -73,13 +73,13 @@ public class DraggableBody : MonoBehaviour
 
     void ApplyDamage(GameObject damage_object)
     {
-        print("Testing collision on rigid body");
-        print("Collided with " + damage_object.gameObject);
+        //print("Testing collision on rigid body");
+        //print("Collided with " + damage_object.gameObject);
         if (damage_object.gameObject.tag != "DONOTTAKEDAMAGE" && collisionDamageCoolDownCounter > 1.0f)
         {
             if (damage_object.gameObject.tag == "INSTANTKILL")
             {
-                print("Limb instant killed");
+                //print("Limb instant killed");
                 collisionDamageCoolDownCounter = 0.0f;
                 damageLerper.DamageMesh(1000000000.0f);
             }
@@ -94,7 +94,7 @@ public class DraggableBody : MonoBehaviour
     private float GetMagnitudeOfCollison()
     {
         Vector3 force = (rb.mass * rb.velocity) / Time.deltaTime;
-        print("Magnitude of collision is " + force.magnitude);
+        //print("Magnitude of collision is " + force.magnitude);
         return force.magnitude;
     }
 
