@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Michael Debug Scene.unity
     guid: 847ce788a3789864bad209fb25dcefa4
+  - enabled: 1
+    path: Assets/Scenes/KineLevel.unity
+    guid: 68e303df2ed88ec41b973fd5e3b9d00a
   m_configObjects: {}

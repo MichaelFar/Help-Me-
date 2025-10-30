@@ -20,7 +20,8 @@ public class CollisionDamageLerper : MonoBehaviour
     //Proto Health System, will be changed for per material and body part
     public float maxHealthLevel = 100.0f; //Most healthy at 0.0, might change logic to reverse if unintuitive
     private float currentHealthLevel = 0.0f;
-    private bool isDead = false;
+    [HideInInspector]
+    public bool isDead = false;
     //public float damageFromImpact = 0.25f;
     
     void Start()

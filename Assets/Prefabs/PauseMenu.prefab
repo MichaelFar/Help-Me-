@@ -570,6 +570,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resumeButton: {fileID: 7027595451048692268}
   quitButton: {fileID: 1535839109525575772}
+  deathScreen: {fileID: 0}
+  victoryScreen: {fileID: 0}
 --- !u!1 &8097413960297982891
 GameObject:
   m_ObjectHideFlags: 0

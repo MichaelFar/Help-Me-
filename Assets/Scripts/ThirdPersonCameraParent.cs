@@ -52,6 +52,6 @@ public class ThirdPersonCameraParent : MonoBehaviour
         zoomRatio += new_vector.y * zoomInterpolateCoeefficient;
         zoomRatio = Mathf.Clamp(zoomRatio, 0.0f, 1.0f);
         playerCamera.transform.position = Vector3.Lerp(farCameraLimit.transform.position, nearCameraLimit.transform.position, zoomRatio);
-        print("PlayerScrolled: " + new_vector);
+        //print("PlayerScrolled: " + new_vector);
     }
 }

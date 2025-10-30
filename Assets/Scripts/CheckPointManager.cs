@@ -8,6 +8,8 @@ public class CheckPointManager : MonoBehaviour
 
     public CheckPointVolume[] checkpointVolumes;
 
+    public DeathVictoryButtons victoryScreen;
+
     private bool reached_all_points = false;
 
     bool reachedAllPoints
@@ -17,8 +19,8 @@ public class CheckPointManager : MonoBehaviour
                         reached_all_points = value;
                         if(reached_all_points)
                         {
-                            //CODE THAT WINS THE GAME
-                            print("You've won");
+                        //CODE THAT WINS THE GAME
+                        victoryScreen.SetShown(true);
                         }
                     }
                

@@ -10,6 +10,10 @@ public class PauseMenu : MonoBehaviour
 
     public UnityEngine.UI.Button resumeButton;
     public UnityEngine.UI.Button quitButton;
+
+    public DeathVictoryButtons deathScreen;
+    public DeathVictoryButtons victoryScreen;
+
     private bool game_paused;
     public bool gamePaused
         {
@@ -19,23 +23,26 @@ public class PauseMenu : MonoBehaviour
                 game_paused = value;
 
                 //Cursor.visible = value;
-                if (game_paused)
+                if(!(deathScreen.gamePaused || victoryScreen.gamePaused))
                 {
+                    if (game_paused)
+                    {
                     
-                    UnityEngine.Cursor.lockState = CursorLockMode.Confined;
-                    UnityEngine.Cursor.visible = true;
-                    Time.timeScale = 0;
-                }
-                else
-                {
-                    UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+                        UnityEngine.Cursor.lockState = CursorLockMode.Confined;
+                        UnityEngine.Cursor.visible = true;
+                        Time.timeScale = 0;
+                    }
+                    else
+                    {
+                        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
 
-                    UnityEngine.Cursor.visible = false;
-                    Time.timeScale = 1;
+                        UnityEngine.Cursor.visible = false;
+                        Time.timeScale = 1;
 
+                    }
+                    //print(value);
+                    GetComponent<Canvas>().enabled = value;
                 }
-                //print(value);
-                GetComponent<Canvas>().enabled = value;
                 
             }
         }
