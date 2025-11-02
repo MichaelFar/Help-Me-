@@ -82,6 +82,7 @@ public class BodyPartManager : MonoBehaviour
             Rigidbody rigidBody = i.GetComponent<Rigidbody>();
             if(i == head)
             {
+                headDamageObject = health_object;
                 health_object.maxHealthLevel = headHealth;
                 health_object.forceThreshold = headMinumumForceThreshold;
                 rigidBody.mass = headMass;

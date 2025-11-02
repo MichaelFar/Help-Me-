@@ -35,9 +35,9 @@ public class DeathVictoryButtons : MonoBehaviour
                     Time.timeScale = 1;
 
                 }
-            }
-                //print(value);
                 GetComponent<Canvas>().enabled = value;
+            }
+                
 
         }
     }
