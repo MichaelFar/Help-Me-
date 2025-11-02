@@ -14,16 +14,18 @@ public class FPCharacterController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float x_axis = Input.GetAxis("Horizontal");
         float z_axis = Input.GetAxis("Vertical");
 
-        Vector3 move_direction = (transform.right * x_axis) + (transform.forward * z_axis);
+        float rise_axis = Input.GetAxis("Rise");
+
+        Vector3 move_direction = (transform.right * x_axis) + (transform.forward * z_axis) + (transform.up * rise_axis);
         move_direction = move_direction.normalized;
         if(move_direction != Vector3.zero)
         {
-            transform.rotation = Quaternion.Euler(cameraParent.rotationVector.x, cameraParent.rotationVector.y, 0);
+            transform.rotation = Quaternion.Euler(0, cameraParent.rotationVector.y, 0);
 
             controller.Move(move_direction * speed * Time.deltaTime);
         }

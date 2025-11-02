@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
     public CollisionDamageLerper[] limbArray;
     void Start()
     {
-        PopulateHealth();
+        //PopulateHealth();
     }
 
     public void DamageHealthBarValue(float damage_amount)

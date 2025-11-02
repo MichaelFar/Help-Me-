@@ -1206,7 +1206,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d329891e81c614b991040f6f0b81a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  headDamageObject: {fileID: 3308846581699186710}
+  healthBar: {fileID: 8649361036312908189}
+  head: {fileID: 8378939061613517829}
+  torso: {fileID: 2381423396628908210}
+  rightArm: {fileID: 8888230600167368365}
+  leftArm: {fileID: 8308696374823495568}
+  rightLeg: {fileID: 2171147647071613501}
+  leftLeg: {fileID: 4522086490399927178}
+  headHealth: 100
+  headMinumumForceThreshold: 10
+  headMass: 0.1
+  headDrag: 1
+  torsoHealth: 100
+  torsoMinumumForceThreshold: 3
+  torsoMass: 0.1
+  torsoDrag: 1
+  leftArmHealth: 100
+  leftArmMinumumForceThreshold: 3
+  leftArmMass: 0.1
+  leftArmDrag: 1
+  rightArmHealth: 100
+  rightArmMinumumForceThreshold: 3
+  rightArmMass: 0.1
+  rightArmDrag: 1
+  leftLegHealth: 100
+  leftLegMinumumForceThreshold: 3
+  leftLegMass: 0.1
+  leftLegDrag: 1
+  rightLegHealth: 100
+  rightLegMinumumForceThreshold: 3
+  rightLegMass: 0.1
+  rightLegDrag: 1
+  deathScreen: {fileID: 0}
 --- !u!1 &2576695846329702860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}

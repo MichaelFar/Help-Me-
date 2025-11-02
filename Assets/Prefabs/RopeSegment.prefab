@@ -125,6 +125,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   forceThreshold: 3
   maxHealthLevel: 100
+  isDead: 0
 --- !u!54 &5831357085432108744
 Rigidbody:
   m_ObjectHideFlags: 0
