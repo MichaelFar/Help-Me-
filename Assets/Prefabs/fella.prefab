@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8596965188478998878}
   - component: {fileID: 4962400326247381582}
   - component: {fileID: 323722829697452938}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BackGroundTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 51814854411686255}
   - component: {fileID: 8282262488368530644}
   - component: {fileID: 6011576849865235744}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HealthBarCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2983041446379219769}
   - component: {fileID: 2892277436544322760}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RotationParent
   m_TagString: DONOTTAKEDAMAGE
   m_Icon: {fileID: 0}
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 3766151921301855361}
   - component: {fileID: 1833446758661825309}
   - component: {fileID: 8649361036312908189}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ForeGroundTexture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,6 +330,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -9070493210130169274, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -9070493210130169274, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
@@ -355,7 +359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.7057981
+      value: 2.259
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -386,6 +390,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8513424388201257645, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8513424388201257645, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
@@ -398,44 +406,88 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: -7657966619581158213, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7657966619581158213, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -7609145667655734672, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -7609145667655734672, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -7235015103121818086, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7235015103121818086, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -6370085079684087283, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -6370085079684087283, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -6170625038081293824, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -6170625038081293824, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -5561550452697079657, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -5561550452697079657, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -5195048882033904264, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5195048882033904264, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -4728426434207774260, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -4728426434207774260, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -4332706925441422008, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4332706925441422008, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -3957782524123411102, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3957782524123411102, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542885339558904099, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3542885339558904099, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
@@ -446,28 +498,56 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3086436065929644917, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -2084811680363313996, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -2084811680363313996, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -1781356600409242780, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1781356600409242780, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -1703473491307067327, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -1703473491307067327, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -1200856079203341021, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1200856079203341021, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -751476226918971245, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -751476226918971245, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -344004081357383697, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -344004081357383697, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
@@ -478,16 +558,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 55c79457ec23b5749a57c40ae55aafeb, type: 2}
     - target: {fileID: -290750445479886849, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -290750445479886849, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: -203856693384778745, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -203856693384778745, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: -8140499575222096, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -8140499575222096, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 9171100556185337, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9171100556185337, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
@@ -498,6 +594,10 @@ PrefabInstance:
       value: fella
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
@@ -506,24 +606,48 @@ PrefabInstance:
       value: mixamorig:Hips:ConnectionToDraggable
       objectReference: {fileID: 0}
     - target: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339101018200438765, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1339101018200438765, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: 2715566404302941441, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2715566404302941441, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 2898355158428612036, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2898355158428612036, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
       objectReference: {fileID: 0}
     - target: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135921509060577837, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
       value: DONOTTAKEDAMAGE
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948933247560734027, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3948933247560734027, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
@@ -536,6 +660,10 @@ PrefabInstance:
     - target: {fileID: 5465940246521907071, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
@@ -556,6 +684,10 @@ PrefabInstance:
     - target: {fileID: 8700783698680967558, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817898888258712963, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8817898888258712963, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
       propertyPath: m_TagString
@@ -841,6 +973,7 @@ MonoBehaviour:
   distanceLimit1: 1
   distanceLimit2: 1
   dragForce: 50
+  distanceCoefficient: 1.3
   damageFromImpact: 0.25
 --- !u!1 &475915484115535302 stripped
 GameObject:
@@ -1082,6 +1215,7 @@ MonoBehaviour:
   distanceLimit1: 5
   distanceLimit2: 5
   dragForce: 3
+  distanceCoefficient: 1.3
   damageFromImpact: 0.25
 --- !u!1 &819561648371140043 stripped
 GameObject:
@@ -1214,7 +1348,7 @@ MonoBehaviour:
   rightLeg: {fileID: 2171147647071613501}
   leftLeg: {fileID: 4522086490399927178}
   headHealth: 100
-  headMinumumForceThreshold: 10
+  headMinumumForceThreshold: 3
   headMass: 0.1
   headDrag: 1
   torsoHealth: 100
@@ -1536,6 +1670,7 @@ MonoBehaviour:
   distanceLimit1: 5
   distanceLimit2: 5
   dragForce: 3
+  distanceCoefficient: 1.3
   damageFromImpact: 0.25
 --- !u!137 &4065214296584468312 stripped
 SkinnedMeshRenderer:
@@ -1662,6 +1797,7 @@ MonoBehaviour:
   distanceLimit1: 5
   distanceLimit2: 5
   dragForce: 3
+  distanceCoefficient: 1.3
   damageFromImpact: 0.25
 --- !u!114 &5156219185396802706
 MonoBehaviour:
@@ -1826,6 +1962,7 @@ MonoBehaviour:
   distanceLimit1: 5
   distanceLimit2: 5
   dragForce: 3
+  distanceCoefficient: 1.3
   damageFromImpact: 0.25
 --- !u!137 &6317056084697274623 stripped
 SkinnedMeshRenderer:
@@ -2082,4 +2219,5 @@ MonoBehaviour:
   distanceLimit1: 5
   distanceLimit2: 5
   dragForce: 3
+  distanceCoefficient: 1.3
   damageFromImpact: 0.25

@@ -38,7 +38,7 @@ public class DraggableBody : MonoBehaviour
         {
             float distance_to_object1 = Vector3.Distance(transform.position, destinationObject1.position);
             Vector3 direction_to_object1 = destinationObject1.position - transform.position;
-            float direction_ratio1 = (distance_to_object1 / distanceLimit1) - (distanceLimit1 / distance_to_object1);//1.0f - (distanceLimit1 / distance_to_object1);// Remember this for future implementations
+            float direction_ratio1 = 1.0f - (distanceLimit1 / distance_to_object1);//(distance_to_object1 / distanceLimit1) - (distanceLimit1 / distance_to_object1);//1.0f - (distanceLimit1 / distance_to_object1);// Remember this for future implementations
 
             direction_ratio1 = Mathf.Clamp(distanceLimit1, distanceLimit1, direction_ratio1 * distanceCoefficient);//Remember this for future implementations
             direction_to_object1 = direction_to_object1.normalized;
@@ -52,7 +52,7 @@ public class DraggableBody : MonoBehaviour
             float distance_to_object2 = Vector3.Distance(transform.position, destinationObject2.position);
             Vector3 direction_to_object2 = destinationObject2.position - transform.position;
 
-            float direction_ratio2 = (distance_to_object2 / distanceLimit2) - (distanceLimit2 / distance_to_object2);
+            float direction_ratio2 = 1.0f - (distanceLimit2 / distance_to_object2);//(distance_to_object2 / distanceLimit2) - (distanceLimit2 / distance_to_object2);
 
             direction_ratio2 = Mathf.Clamp(distanceLimit2, distanceLimit2, direction_ratio2 * distanceCoefficient);
             //print("Direction ratio2 is " + direction_ratio2);
