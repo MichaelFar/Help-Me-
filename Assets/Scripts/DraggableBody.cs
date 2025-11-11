@@ -12,6 +12,7 @@ public class DraggableBody : MonoBehaviour
     public CollisionDamageLerper damageLerper;
     public Transform destinationObject1;
     public Transform destinationObject2;
+    
     public float distanceLimit1 = 5.0f;
     public float distanceLimit2 = 5.0f;
     public float dragForce = 3.0f;

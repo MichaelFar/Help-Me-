@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
         {
             get { return game_paused; }
             set 
-            { 
+            {
                 game_paused = value;
 
                 //Cursor.visible = value;
