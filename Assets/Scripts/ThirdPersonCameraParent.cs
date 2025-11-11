@@ -87,24 +87,25 @@ public class ThirdPersonCameraParent : MonoBehaviour
 
         //Array.Clear(RaycastInfoArray, 0, RaycastInfoArray.Length);
 
-        foreach (RaycastHit i in all_hits)
+        
+        for (int i = 0; i < all_hits.Length; i++)
         {
-            //print("Raycasting");
-            //previousMaterial = ray_cast_struct.collider.GetComponent<Material>();
-            if (i.collider.GetComponent<MeshRenderer>())
+                //print("Raycasting");
+                //previousMaterial = ray_cast_struct.collider.GetComponent<Material>();
+            if (all_hits[i].collider.GetComponent<MeshRenderer>())
             {
-                objectsFromRaycastHit.Add(i.collider.gameObject);
+                objectsFromRaycastHit.Add(all_hits[i].collider.gameObject);
 
-                RaycastInfo stored_info = new RaycastInfo(i.collider.gameObject);
+                RaycastInfo stored_info = new RaycastInfo(all_hits[i].collider.gameObject);
                 if (!isAlreadyInRaycastInfoList(stored_info))
                 {
 
 
                     //if (!isAlreadyInRaycastInfoList(stored_info))
                     //{
-                    print("appending" + stored_info.thisGameObject + " raycastlist");
+                    //print("appending" + stored_info.thisGameObject + " raycastlist");
                     RaycastInfoArray.Add(stored_info);
-                    print(RaycastInfoArray);
+                    //print(RaycastInfoArray);
                     stored_info.thisGameObject.GetComponent<MeshRenderer>().material = transparentMaterial;
 
                     //}
@@ -160,18 +161,18 @@ public class ThirdPersonCameraParent : MonoBehaviour
     private bool isAlreadyInRaycastInfoList(RaycastInfo object_to_check)
     {
 
-        
 
-        foreach (RaycastInfo i in RaycastInfoArray)
+
+        for (int i = 0; i < RaycastInfoArray.Count; i++)
         {
             //print("Looping");
-            if(object_to_check.thisGameObject.Equals(i.thisGameObject))
+            if (object_to_check.thisGameObject.Equals(RaycastInfoArray[i].thisGameObject))
             {
                 //print("Same object found in raycastinfolist");
                 return true;
             }
         }
-        print(object_to_check.thisGameObject + " is not in the raycastinfolist");
+        //print(object_to_check.thisGameObject + " is not in the raycastinfolist");
         return false;
     }
 }

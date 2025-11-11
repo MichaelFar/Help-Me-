@@ -85,6 +85,7 @@ MonoBehaviour:
   sensitivityVector: {x: 350, y: 350}
   playerTransform: {fileID: 2603254105554694587}
   rotationVector: {x: 0, y: 0}
+  transparentMaterial: {fileID: 2100000, guid: 1f2452d3ab9f6a64799d576189972cee, type: 2}
   playerCamera: {fileID: 4139656398463566078}
   nearCameraLimit: {fileID: 256275786704145011}
   farCameraLimit: {fileID: 4641176633324786850}
@@ -208,10 +209,10 @@ MonoBehaviour:
   - {fileID: 7946249036052343293}
   ropeAnchor: {fileID: 8064029472050628696}
   bodyConnection: {fileID: 4200894067967190048}
-  lengthOfRope: 2
+  lengthOfRope: 2.3
   ropeMass: 0.1
   ropeForce: 30
-  distanceCoefficient: 1.1
+  distanceCoefficient: 0.8
   ropeDrag: 2
 --- !u!1 &6579470445755915483
 GameObject:
