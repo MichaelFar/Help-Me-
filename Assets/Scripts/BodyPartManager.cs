@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -54,6 +55,10 @@ public class BodyPartManager : MonoBehaviour
 
     public DeathVictoryButtons deathScreen;
 
+    public GameObject severedLimbObject;
+
+    
+
     private int numDied = 0;
     void Start()
     {
@@ -79,6 +84,9 @@ public class BodyPartManager : MonoBehaviour
         foreach (DraggableBody i in limb_array)
         {
             CollisionDamageLerper health_object = i.GetComponent<CollisionDamageLerper>();
+            health_object.canBeSevered = true;
+            
+            health_object.severedLimbPrefab = severedLimbObject;
             Rigidbody rigidBody = i.GetComponent<Rigidbody>();
             if(i == head)
             {
@@ -123,6 +131,7 @@ public class BodyPartManager : MonoBehaviour
                 rigidBody.mass = rightLegMass;
                 rigidBody.drag = rightLegDrag;
             }
+            health_object.fellaObject = headDamageObject.gameObject;
 
         }
 
@@ -133,4 +142,6 @@ public class BodyPartManager : MonoBehaviour
         //Assign Health
         
     }
+
+    //public void SetActiveFalseToSeveredLimbs
 }

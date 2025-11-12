@@ -85,13 +85,9 @@ public class ThirdPersonCameraParent : MonoBehaviour
 
         List<GameObject> objectsFromRaycastHit = new List<GameObject>();
 
-        //Array.Clear(RaycastInfoArray, 0, RaycastInfoArray.Length);
-
-        
         for (int i = 0; i < all_hits.Length; i++)
         {
-                //print("Raycasting");
-                //previousMaterial = ray_cast_struct.collider.GetComponent<Material>();
+                
             if (all_hits[i].collider.GetComponent<MeshRenderer>())
             {
                 objectsFromRaycastHit.Add(all_hits[i].collider.gameObject);
@@ -100,20 +96,12 @@ public class ThirdPersonCameraParent : MonoBehaviour
                 if (!isAlreadyInRaycastInfoList(stored_info))
                 {
 
-
-                    //if (!isAlreadyInRaycastInfoList(stored_info))
-                    //{
-                    //print("appending" + stored_info.thisGameObject + " raycastlist");
                     RaycastInfoArray.Add(stored_info);
-                    //print(RaycastInfoArray);
+                    
                     stored_info.thisGameObject.GetComponent<MeshRenderer>().material = transparentMaterial;
-
-                    //}
 
                 }
             }
-                //if(!isAlreadyInRaycastInfoList(i.collider.gameObject))
-            
                 
         }
 
@@ -121,19 +109,6 @@ public class ThirdPersonCameraParent : MonoBehaviour
         
         if (objectsFromRaycastHit.Count != RaycastInfoArray.Count)
         {
-            /*
-            foreach (RaycastInfo i in RaycastInfoArray)
-            {
-
-                if (!objectsFromRaycastHit.Contains<GameObject>(i.thisGameObject))
-                {
-                    //print("Setting material back for " + i.thisGameObject);
-                    i.thisMeshRenderer.material = i.thisMaterial;
-                }
-
-            }
-            */
-            //print("Clearing array");
 
             foreach (RaycastInfo i in RaycastInfoArray)
             {
@@ -141,27 +116,13 @@ public class ThirdPersonCameraParent : MonoBehaviour
             }
 
             RaycastInfoArray = new List<RaycastInfo>();
-            
-                
+              
         }
-        /*
-        if(all_hits.Length != RaycastInfoArray.Length)
-        {
-            foreach (RaycastInfo i in RaycastInfoArray)
-            {
-                i.thisMeshRenderer.material = i.thisMaterial;
-            }
-            
-        }
-        */
-        //Array.Clear(RaycastInfoArray, 0, RaycastInfoArray.Length);
-
+       
     }
 
     private bool isAlreadyInRaycastInfoList(RaycastInfo object_to_check)
     {
-
-
 
         for (int i = 0; i < RaycastInfoArray.Count; i++)
         {

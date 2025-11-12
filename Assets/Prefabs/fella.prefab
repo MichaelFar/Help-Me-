@@ -953,7 +953,10 @@ MonoBehaviour:
   healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
+  canBeSevered: 0
+  severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
+  fellaObject: {fileID: 0}
 --- !u!114 &8378939061613517829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,7 +1198,10 @@ MonoBehaviour:
   healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
+  canBeSevered: 0
+  severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
+  fellaObject: {fileID: 0}
 --- !u!114 &4522086490399927178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,6 +1378,7 @@ MonoBehaviour:
   rightLegMass: 0.1
   rightLegDrag: 1
   deathScreen: {fileID: 0}
+  severedLimbObject: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
 --- !u!1 &2576695846329702860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1082271958561512970, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -1650,7 +1657,10 @@ MonoBehaviour:
   healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
+  canBeSevered: 0
+  severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
+  fellaObject: {fileID: 0}
 --- !u!114 &8888230600167368365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,7 +1827,10 @@ MonoBehaviour:
   healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
+  canBeSevered: 0
+  severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
+  fellaObject: {fileID: 0}
 --- !u!4 &6086657811800618560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8700783698680967558, guid: d3f5a1b2b79bd6b4797c50cafae7556c, type: 3}
@@ -1942,7 +1955,10 @@ MonoBehaviour:
   healthBar: {fileID: 8649361036312908189}
   forceThreshold: 1
   maxHealthLevel: 100
+  canBeSevered: 0
+  severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
+  fellaObject: {fileID: 0}
 --- !u!114 &8308696374823495568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,7 +2215,10 @@ MonoBehaviour:
   healthBar: {fileID: 8649361036312908189}
   forceThreshold: 3
   maxHealthLevel: 100
+  canBeSevered: 0
+  severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
+  fellaObject: {fileID: 0}
 --- !u!114 &2171147647071613501
 MonoBehaviour:
   m_ObjectHideFlags: 0
