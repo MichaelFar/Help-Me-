@@ -25,19 +25,21 @@ public class CollisionDamageLerper : MonoBehaviour
 
     public GameObject severedLimbPrefab;
     private float currentHealthLevel = 0.0f;
-    private CharacterJoint connectedJoint;
+    //private CharacterJoint connectedJoint;
     private GameObject connectedObject;
 
     [HideInInspector]
     public bool isDead = false;
     [HideInInspector]
     public GameObject fellaObject;
+    [HideInInspector]
+    public BodyPartManager bodyPartManager;
     //public float damageFromImpact = 0.25f;
-    public event EventHandler severed_limb;
+    //public event EventHandler severed_limb;
     void Start()
     {
         currentHealthLevel = maxHealthLevel;
-        connectedJoint = gameObject.GetComponent<CharacterJoint>();
+        //connectedJoint = gameObject.GetComponent<CharacterJoint>();
         connectedObject = rend.gameObject;
         DamageMesh(0.0f);
     }
@@ -53,34 +55,55 @@ public class CollisionDamageLerper : MonoBehaviour
         if (damage_from_impact > forceThreshold && rend != null)
         {
             currentHealthLevel -= damage_from_impact;
-
-            if (currentHealthLevel <= 0.0f)
-            {
-                isDead = true;
-                if(connectedJoint != null)
-                {
-                    if(canBeSevered)
-                    {
-                        InstanceSeveredLimb(connectedObject.GetComponent<SkinnedMeshRenderer>().sharedMesh);
-                        //connectedJoint.connectedBody = null;
-                        // connectedObject.transform.SetParent(null);
-                        //connectedObject.GetComponent<SkinnedMeshRenderer>().rootBone = null;
-                        //Destroy(connectedObject);
-                        connectedObject.SetActive(false);
-                        
-                    }
-                }
-            }
-            
             currentHealthLevel = Math.Clamp(currentHealthLevel, 0.0f, maxHealthLevel);
-                
-            
+
+
             float normalized_health = currentHealthLevel / maxHealthLevel;
             rend.material.Lerp(damagedMaterial, fullHealthMaterial, normalized_health);
-            if (healthBar != null && currentHealthLevel >= 0.0f)
+            if (healthBar != null && currentHealthLevel >= 0.0f && !isDead)
             {
                 healthBar.DamageHealthBarValue(Mathf.Clamp(damage_from_impact, 0.0f, maxHealthLevel));
             }
+            if (currentHealthLevel <= 0.01f)
+            {
+                if (!isDead)
+                {
+                    if (canBeSevered)
+                    {
+                        List<GameObject> connected_object_children = Tools.GetChildrenOfObject(connectedObject);
+                        Mesh connected_shared_mesh = connectedObject.GetComponent<SkinnedMeshRenderer>().sharedMesh;
+                        InstanceSeveredLimb(connected_shared_mesh);
+
+                        bodyPartManager.SetLimbDestroyedProperties(connected_shared_mesh);
+                        
+                        foreach (GameObject i in connected_object_children)
+                        {
+                            Mesh this_mesh = i.GetComponent<SkinnedMeshRenderer>().sharedMesh;
+                            CollisionDamageLerper potential_lerper_object = bodyPartManager.GetLerperFromMesh(this_mesh);
+
+                            if (potential_lerper_object != null)
+                            {
+
+                                if (!potential_lerper_object.isDead)
+                                {
+                                    Mesh this_shared_mesh = i.GetComponent<SkinnedMeshRenderer>().sharedMesh;
+                                    InstanceSeveredLimb(this_shared_mesh);
+                                    bodyPartManager.SetLimbDestroyedProperties(this_shared_mesh);
+                                    print(i.gameObject + " Severing child limb");
+                                }
+                            }
+                               
+                        }
+
+                        connectedObject.SetActive(false);
+
+                    }
+                }
+                isDead = true;
+                
+            }
+            
+            
                 
 
         }

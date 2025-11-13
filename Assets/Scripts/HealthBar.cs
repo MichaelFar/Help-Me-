@@ -26,7 +26,15 @@ public class HealthBar : MonoBehaviour
 
     public void HealHealthBar(float heal_amount)
     {
-        healthBarImage.fillAmount += heal_amount / totalHealth;
+        float num_dead = 0.0f;
+        foreach (CollisionDamageLerper i in limbArray)
+        {
+            if (i.isDead)
+            {
+                num_dead += 1.0f * i.maxHealthLevel;
+            }
+        }
+        healthBarImage.fillAmount += heal_amount / (totalHealth - num_dead);
     }
 
     public void PopulateHealth()

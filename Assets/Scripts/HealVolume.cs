@@ -25,7 +25,7 @@ public class HealVolume : MonoBehaviour
         if(is_draggable)
         {
             CollisionDamageLerper damage_lerper = other.gameObject.GetComponent<CollisionDamageLerper>();
-            if (other.gameObject.GetComponent<CollisionDamageLerper>())
+            if (other.gameObject.GetComponent<CollisionDamageLerper>() && !damage_lerper.isDead)
             {
                 damage_lerper.HealMesh(healAmount);
             }

@@ -59,6 +59,8 @@ public class BodyPartManager : MonoBehaviour
 
     
 
+    
+    
     private int numDied = 0;
     void Start()
     {
@@ -85,7 +87,7 @@ public class BodyPartManager : MonoBehaviour
         {
             CollisionDamageLerper health_object = i.GetComponent<CollisionDamageLerper>();
             health_object.canBeSevered = true;
-            
+            health_object.bodyPartManager = this;
             health_object.severedLimbPrefab = severedLimbObject;
             Rigidbody rigidBody = i.GetComponent<Rigidbody>();
             if(i == head)
@@ -100,6 +102,7 @@ public class BodyPartManager : MonoBehaviour
             {
                 health_object.maxHealthLevel = torsoHealth;
                 health_object.forceThreshold = torsoMinumumForceThreshold;
+                //health_object.canBeSevered = false;
                 rigidBody.mass = torsoMass;
                 rigidBody.drag = torsoDrag;
             }
@@ -143,5 +146,59 @@ public class BodyPartManager : MonoBehaviour
         
     }
 
-    //public void SetActiveFalseToSeveredLimbs
+    public void SetLimbDestroyedProperties(Mesh limb_mesh)
+    {
+        DraggableBody[] limb_array = { head, torso, leftArm, rightArm, leftLeg, rightLeg };
+        foreach (DraggableBody i in limb_array)
+        {
+            CollisionDamageLerper this_lerper = i.GetComponent<CollisionDamageLerper>();
+            //this_lerper.isDead = true;
+            GameObject limb_object = this_lerper.rend.gameObject;
+            GameObject limb_physics_object = i.gameObject;
+
+            if (limb_object.GetComponent<SkinnedMeshRenderer>().sharedMesh == limb_mesh)
+            {
+                this_lerper.isDead = true;
+                Rigidbody this_rigid_body = GetRigidBodyOfLimb(i);
+                this_rigid_body.mass = 0.1f;
+                //this_rigid_body.drag = 0.0f;
+                //Destroy(limb_physics_object.GetComponent<Collider>());
+
+            }
+        }
+    }
+    public GameObject GetLimbObjectFromMesh(Mesh limb_mesh)
+    {
+        DraggableBody[] limb_array = {head, torso, leftArm, rightArm, leftLeg, rightLeg};
+        foreach (DraggableBody i in limb_array)
+        {
+            CollisionDamageLerper this_lerper = i.GetComponent<CollisionDamageLerper>();
+            //this_lerper.isDead = true;
+            GameObject limb_object = this_lerper.rend.gameObject;
+            if (limb_object.GetComponent<SkinnedMeshRenderer>().sharedMesh == limb_mesh)
+            {
+                return limb_object;
+            }
+        }
+        return null;
+    }
+    public CollisionDamageLerper GetLerperFromMesh(Mesh limb_mesh)
+    {
+        DraggableBody[] limb_array = { head, torso, leftArm, rightArm, leftLeg, rightLeg };
+        foreach (DraggableBody i in limb_array)
+        {
+            CollisionDamageLerper this_lerper = i.GetComponent<CollisionDamageLerper>();
+            //this_lerper.isDead = true;
+            GameObject limb_object = this_lerper.rend.gameObject;
+            if (limb_object.GetComponent<SkinnedMeshRenderer>().sharedMesh == limb_mesh)
+            {
+                return this_lerper;
+            }
+        }
+        return null;
+    }
+    public Rigidbody GetRigidBodyOfLimb(DraggableBody body)
+    {
+        return body.GetComponent<Rigidbody>();
+    }
 }
