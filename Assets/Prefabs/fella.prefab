@@ -97,7 +97,7 @@ CharacterJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: -1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.037906967, y: 1.5797646, z: -0.24700011}
+  m_ConnectedAnchor: {x: 0.037906963, y: 1.5797646, z: -0.009999936}
   serializedVersion: 2
   m_SwingAxis: {x: 1, y: 0, z: 0}
   m_TwistLimitSpring:
@@ -153,6 +153,7 @@ MonoBehaviour:
   severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
   fellaObject: {fileID: 0}
+  bodyPartManager: {fileID: 0}
 --- !u!114 &8378939061613517829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,6 +461,7 @@ MonoBehaviour:
   severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
   fellaObject: {fileID: 0}
+  bodyPartManager: {fileID: 0}
 --- !u!114 &4522086490399927178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +804,7 @@ Transform:
   m_Children:
   - {fileID: 2539413274003788149}
   - {fileID: 7430279768843157689}
+  - {fileID: 324614672942769198}
   - {fileID: 9105410598507065707}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -850,6 +853,7 @@ MonoBehaviour:
   rightLegDrag: 1
   deathScreen: {fileID: 0}
   severedLimbObject: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
+  scoreTracker: {fileID: 0}
 --- !u!1 &2496533710897250762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,10 +1043,7 @@ Transform:
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 324614672942769198}
-  - {fileID: 9014994422015544332}
-  - {fileID: 2056532485552061746}
+  m_Children: []
   m_Father: {fileID: 3120425929443467309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &7069405333206248222
@@ -1536,6 +1537,7 @@ MonoBehaviour:
   severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
   fellaObject: {fileID: 0}
+  bodyPartManager: {fileID: 0}
 --- !u!114 &8888230600167368365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1710,7 +1712,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9105410598507065707}
+  m_Father: {fileID: 324614672942769198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &6317056084697274623
 SkinnedMeshRenderer:
@@ -2103,6 +2105,7 @@ MonoBehaviour:
   severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
   fellaObject: {fileID: 0}
+  bodyPartManager: {fileID: 0}
 --- !u!1 &5991010053427976054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2349,6 +2352,7 @@ MonoBehaviour:
   severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
   fellaObject: {fileID: 0}
+  bodyPartManager: {fileID: 0}
 --- !u!114 &8308696374823495568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2432,7 +2436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9105410598507065707}
+  m_Father: {fileID: 324614672942769198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &4065214296584468312
 SkinnedMeshRenderer:
@@ -2672,7 +2676,9 @@ Transform:
   m_Children:
   - {fileID: 5856758626098088157}
   - {fileID: 2307012626561704355}
-  m_Father: {fileID: 9105410598507065707}
+  - {fileID: 9014994422015544332}
+  - {fileID: 2056532485552061746}
+  m_Father: {fileID: 3120425929443467309}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &2761404503372617396
 SkinnedMeshRenderer:
@@ -3119,6 +3125,7 @@ MonoBehaviour:
   severedLimbPrefab: {fileID: 6621215369676668987, guid: 236a5162edbe0c440b7269e0d60ea271, type: 3}
   isDead: 0
   fellaObject: {fileID: 0}
+  bodyPartManager: {fileID: 0}
 --- !u!114 &2171147647071613501
 MonoBehaviour:
   m_ObjectHideFlags: 0

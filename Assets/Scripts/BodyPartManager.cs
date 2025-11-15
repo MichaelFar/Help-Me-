@@ -57,10 +57,8 @@ public class BodyPartManager : MonoBehaviour
 
     public GameObject severedLimbObject;
 
-    
+    public ScoreTracker scoreTracker;
 
-    
-    
     private int numDied = 0;
     void Start()
     {
@@ -74,7 +72,9 @@ public class BodyPartManager : MonoBehaviour
         {
             print("Head has died and you lose");
             numDied += 1;
-            ///Put death function here 
+            ///Put death function here
+            scoreTracker.CalculateScore();
+            scoreTracker.SetScoreLabelText();
             deathScreen.SetShown(true);
         }
     }
@@ -82,7 +82,9 @@ public class BodyPartManager : MonoBehaviour
     void SetLimbProperties()
     {
         DraggableBody[] limb_array = {head, torso, leftArm, rightArm, leftLeg, rightLeg};
-        
+
+        List<CollisionDamageLerper> limb_lerpers = new List<CollisionDamageLerper>();
+
         foreach (DraggableBody i in limb_array)
         {
             CollisionDamageLerper health_object = i.GetComponent<CollisionDamageLerper>();
@@ -93,6 +95,7 @@ public class BodyPartManager : MonoBehaviour
             if(i == head)
             {
                 headDamageObject = health_object;
+                scoreTracker.headObject = headDamageObject;
                 health_object.maxHealthLevel = headHealth;
                 health_object.forceThreshold = headMinumumForceThreshold;
                 rigidBody.mass = headMass;
@@ -139,11 +142,7 @@ public class BodyPartManager : MonoBehaviour
         }
 
         healthBar.PopulateHealth();
-        
-        
-        
-        //Assign Health
-        
+        scoreTracker.PopulateHealthLerpers(limb_array);
     }
 
     public void SetLimbDestroyedProperties(Mesh limb_mesh)

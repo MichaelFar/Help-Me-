@@ -17,10 +17,7 @@ public class CollisionDamageLerper : MonoBehaviour
 
     public float forceThreshold = 3.0f; //If the force of impact is higher than this, damage will be taken
 
-
-
-    //Proto Health System, will be changed for per material and body part
-    public float maxHealthLevel = 100.0f; //Most healthy at 0.0, might change logic to reverse if unintuitive
+    public float maxHealthLevel = 100.0f;
     public bool canBeSevered = false;
 
     public GameObject severedLimbPrefab;
@@ -57,7 +54,6 @@ public class CollisionDamageLerper : MonoBehaviour
             currentHealthLevel -= damage_from_impact;
             currentHealthLevel = Math.Clamp(currentHealthLevel, 0.0f, maxHealthLevel);
 
-
             float normalized_health = currentHealthLevel / maxHealthLevel;
             rend.material.Lerp(damagedMaterial, fullHealthMaterial, normalized_health);
             if (healthBar != null && currentHealthLevel >= 0.0f && !isDead)
@@ -68,7 +64,7 @@ public class CollisionDamageLerper : MonoBehaviour
             {
                 if (!isDead)
                 {
-                    if (canBeSevered)
+                    if (canBeSevered) // Below is limb severing logic and checks
                     {
                         List<GameObject> connected_object_children = Tools.GetChildrenOfObject(connectedObject);
                         Mesh connected_shared_mesh = connectedObject.GetComponent<SkinnedMeshRenderer>().sharedMesh;
@@ -103,9 +99,6 @@ public class CollisionDamageLerper : MonoBehaviour
                 
             }
             
-            
-                
-
         }
     }
     public void HealMesh(float heal_amount)
@@ -131,5 +124,14 @@ public class CollisionDamageLerper : MonoBehaviour
         limb_instance.GetComponent<MeshCollider>().sharedMesh = mesh_for_limb;
     }
     
+    public float GetCurrentHealth()
+    {
+        return currentHealthLevel;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealthLevel;
+    }
     
 }
