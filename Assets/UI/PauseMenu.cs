@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PauseMenu : MonoBehaviour
@@ -9,10 +10,14 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
 
     public UnityEngine.UI.Button resumeButton;
+    public UnityEngine.UI.Button mainMenuButton;
     public UnityEngine.UI.Button quitButton;
+
+    public string mainMenuString;
 
     public DeathVictoryButtons deathScreen;
     public DeathVictoryButtons victoryScreen;
+    
 
     private bool game_paused;
     public bool gamePaused
@@ -73,6 +78,7 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         resumeButton.onClick.AddListener(ResumeGame);
+        mainMenuButton.onClick.AddListener(goToMainMenu);
         quitButton.onClick.AddListener(QuitGame);
         gamePaused = false;
         
@@ -86,6 +92,11 @@ public class PauseMenu : MonoBehaviour
             gamePaused = !gamePaused;
             
         }
+    }
+    public void goToMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuString);
+        Debug.Log("Loaded Main Menu");
     }
     void ResumeGame()
     {

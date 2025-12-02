@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3285915683949402863}
   - component: {fileID: 477558889035103614}
   - component: {fileID: 7379273073039653059}
-  m_Layer: 0
-  m_Name: Laser
-  m_TagString: INSTANTKILL
+  - component: {fileID: 8799010554260342864}
+  m_Layer: 3
+  m_Name: KinderLaser
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,3 +108,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8799010554260342864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564112726232020645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571d1f6879a42244c8228cd394cd5f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customDamageOnHit: 60

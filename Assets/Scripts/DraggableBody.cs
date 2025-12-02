@@ -88,8 +88,16 @@ public class DraggableBody : MonoBehaviour
             }
             else
             {
+                CustomDamageValue custom_damage_value = damage_object.GetComponent<CustomDamageValue>();
+                bool has_custom_damage = damage_object.GetComponent<CustomDamageValue>();
+                float extra_damage = 0.0f;
                 collisionDamageCoolDownCounter = 0.0f;
-                damageLerper.DamageMesh(GetMagnitudeOfCollison());
+                if(has_custom_damage)
+                {
+                    print("Extra damage received is " + custom_damage_value.GetDamageOnHit());
+                    extra_damage = custom_damage_value.GetDamageOnHit();
+                }
+                damageLerper.DamageMesh(GetMagnitudeOfCollison() + extra_damage);
             }
 
         }

@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Michael Debug Scene.unity
     guid: 847ce788a3789864bad209fb25dcefa4
   - enabled: 0
@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/KineLevelButCooler.unity
     guid: 71fafc80dba933d489340d879e707268
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 38ca41ce78493c045b2f4c1ef8bf6f3c
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: f9bf5156f19a31245ba01e6668514572
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: e4cf6926e7781a340896d964d180f41b
   m_configObjects: {}

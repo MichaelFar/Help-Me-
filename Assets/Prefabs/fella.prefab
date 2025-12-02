@@ -828,27 +828,27 @@ MonoBehaviour:
   rightLeg: {fileID: 2171147647071613501}
   leftLeg: {fileID: 4522086490399927178}
   headHealth: 100
-  headMinumumForceThreshold: 3
+  headMinumumForceThreshold: 40
   headMass: 0.1
   headDrag: 1
   torsoHealth: 100
-  torsoMinumumForceThreshold: 3
+  torsoMinumumForceThreshold: 40
   torsoMass: 0.1
   torsoDrag: 1
   leftArmHealth: 100
-  leftArmMinumumForceThreshold: 3
+  leftArmMinumumForceThreshold: 40
   leftArmMass: 0.1
   leftArmDrag: 1
   rightArmHealth: 100
-  rightArmMinumumForceThreshold: 3
+  rightArmMinumumForceThreshold: 40
   rightArmMass: 0.1
   rightArmDrag: 1
   leftLegHealth: 100
-  leftLegMinumumForceThreshold: 3
+  leftLegMinumumForceThreshold: 40
   leftLegMass: 0.1
   leftLegDrag: 1
   rightLegHealth: 100
-  rightLegMinumumForceThreshold: 3
+  rightLegMinumumForceThreshold: 40
   rightLegMass: 0.1
   rightLegDrag: 1
   deathScreen: {fileID: 0}
