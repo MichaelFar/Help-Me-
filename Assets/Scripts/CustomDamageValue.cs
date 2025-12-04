@@ -22,12 +22,17 @@ public class CustomDamageValue : MonoBehaviour
             if(positionChanged)
             {
                 print("Moving custom damage");
+                print("Difference in position is " + (positionThisFrame - positionLastFrame));
                 return customDamageOnHit;
             }
         }
-        
+        else
+        {
+            return customDamageOnHit;
+        }
 
-            return 0.0f;
+
+           return 0.0f;
     }
     private void Update()
     {
@@ -42,7 +47,7 @@ public class CustomDamageValue : MonoBehaviour
         {
             positionThisFrame = transform.position;
         }
-        positionChanged = positionLastFrame == positionThisFrame;
+        positionChanged = positionLastFrame != positionThisFrame;
         //print("Position changed is " + positionChanged);
     }
 }
