@@ -274,6 +274,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &626519220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1551171600578269665, guid: 047611e0089be3b4aa8e46deea20808c, type: 3}
+  m_PrefabInstance: {fileID: 325001746011973448}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11af55eb0f9ae1c4589248ce1d3813b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &857906970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,10 +498,6 @@ PrefabInstance:
     - target: {fileID: 2564112726232020645, guid: 3dc036df0db3ae74493b2b393fc04c3d, type: 3}
       propertyPath: m_Name
       value: KinderLaser (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8799010554260342864, guid: 3dc036df0db3ae74493b2b393fc04c3d, type: 3}
-      propertyPath: customDamageOnHit
-      value: 1000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -944,6 +951,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dc036df0db3ae74493b2b393fc04c3d, type: 3}
+--- !u!114 &1223927869 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4920885740004825863, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+  m_PrefabInstance: {fileID: 1587764271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 360edc079be2ac343832b93ff0ded521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1233043338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1350,14 @@ PrefabInstance:
       propertyPath: m_IncludeLayers.m_Bits
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4920885740004825863, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: checkpointVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920885740004825863, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: checkpointVolumes.Array.data[0]
+      value: 
+      objectReference: {fileID: 626519220}
     - target: {fileID: 6352151972059497166, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.025894165
@@ -1425,7 +1451,7 @@ GameObject:
   - component: {fileID: 1863502032}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: DONOTTAKEDAMAGE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2101,7 +2127,7 @@ PrefabInstance:
     - target: {fileID: 1551171600578269665, guid: 047611e0089be3b4aa8e46deea20808c, type: 3}
       propertyPath: myManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1223927869}
     - target: {fileID: 1679734919485601833, guid: 047611e0089be3b4aa8e46deea20808c, type: 3}
       propertyPath: m_Name
       value: CheckPointVolume

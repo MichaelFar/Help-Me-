@@ -59,6 +59,8 @@ public class BodyPartManager : MonoBehaviour
 
     public ScoreTracker scoreTracker;
 
+    public List<CollisionDamageLerper> ListOfLimbLerpers = new List<CollisionDamageLerper>();
+
     private int numDied = 0;
     void Start()
     {
@@ -92,6 +94,7 @@ public class BodyPartManager : MonoBehaviour
             health_object.bodyPartManager = this;
             health_object.severedLimbPrefab = severedLimbObject;
             Rigidbody rigidBody = i.GetComponent<Rigidbody>();
+            limb_lerpers.Add(health_object);
             if(i == head)
             {
                 headDamageObject = health_object;
@@ -140,7 +143,7 @@ public class BodyPartManager : MonoBehaviour
             health_object.fellaObject = headDamageObject.gameObject;
 
         }
-
+        ListOfLimbLerpers = limb_lerpers;
         healthBar.PopulateHealth();
         scoreTracker.PopulateHealthLerpers(limb_array);
     }
@@ -157,9 +160,15 @@ public class BodyPartManager : MonoBehaviour
 
             if (limb_object.GetComponent<SkinnedMeshRenderer>().sharedMesh == limb_mesh)
             {
+                //limb_object.layer = ""
                 this_lerper.isDead = true;
                 Rigidbody this_rigid_body = GetRigidBodyOfLimb(i);
                 this_rigid_body.mass = 0.1f;
+                Collider potential_collider = limb_object.GetComponent<Collider>();
+                if(potential_collider)
+                {
+                    potential_collider.isTrigger = true;
+                }
                 //this_rigid_body.drag = 0.0f;
                 //Destroy(limb_physics_object.GetComponent<Collider>());
 
