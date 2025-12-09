@@ -1,8 +1,11 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class ScoreTracker : MonoBehaviour
 {
@@ -81,13 +84,25 @@ public class ScoreTracker : MonoBehaviour
             final_score = modified_score;
         }
 
-        currentFinalScore = final_score;
         
+        currentFinalScore = final_score;
+        SaveScoreToFile(currentFinalScore.ToString());
     }
 
     public void SetScoreLabelText()
     {
         gameOverScoreTextLabel.text = "Your score: "+ currentFinalScore.ToString();
         victoryScoreTextLabel.text = "Your score: " + currentFinalScore.ToString();
+    }
+    private void SaveScoreToFile(string score)
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        string path = Application.dataPath + "\\" + scene.name + "ScoreSave.txt";
+        
+        using (StreamWriter sw = File.CreateText(path))
+        {
+            sw.WriteLine(score);
+        }
+        
     }
 }

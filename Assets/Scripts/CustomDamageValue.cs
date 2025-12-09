@@ -7,7 +7,7 @@ public class CustomDamageValue : MonoBehaviour
     // Start is called before the first frame update
 
     public float customDamageOnHit = 5.0f;
-    public float minimumForceThreshold = 0.0f;
+    //public float minimumForceThreshold = 0.0f;
     public bool onlyWhenMoving = false;
     private bool positionChanged = false;
     private Vector3 positionLastFrame = Vector3.zero;

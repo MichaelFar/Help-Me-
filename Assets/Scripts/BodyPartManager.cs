@@ -16,6 +16,7 @@ public class BodyPartManager : MonoBehaviour
     public DraggableBody leftArm;
     public DraggableBody rightLeg;
     public DraggableBody leftLeg;
+    
 
     [Header("Head Stats")]
     public float headHealth = 100.0f;

@@ -21,7 +21,8 @@ public class CollisionDamageLerper : MonoBehaviour
     public bool canBeSevered = false;
 
     public GameObject severedLimbPrefab;
-    private float currentHealthLevel = 0.0f;
+    [HideInInspector]
+    public float currentHealthLevel = 0.0f;
     //private CharacterJoint connectedJoint;
     private GameObject connectedObject;
 
