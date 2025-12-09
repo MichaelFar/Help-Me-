@@ -4,7 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class ScoreTracker : MonoBehaviour
@@ -26,6 +25,8 @@ public class ScoreTracker : MonoBehaviour
 
     public TextMeshProUGUI gameOverScoreTextLabel;
     public TextMeshProUGUI victoryScoreTextLabel;
+    public TextMeshProUGUI victoryHighScoreTextLabel;
+    public TextMeshProUGUI gameOverHighScoreTextLabel;
     void Start()
     {
         
@@ -91,6 +92,7 @@ public class ScoreTracker : MonoBehaviour
 
     public void SetScoreLabelText()
     {
+        GetScoreAndPopulateLabels();
         gameOverScoreTextLabel.text = "Your score: "+ currentFinalScore.ToString();
         victoryScoreTextLabel.text = "Your score: " + currentFinalScore.ToString();
     }
@@ -99,6 +101,15 @@ public class ScoreTracker : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         string path = Application.dataPath + "\\" + scene.name + "ScoreSave.txt";
         bool is_higher = false;
+        if(!File.Exists(path))
+        {
+            using (StreamWriter sw = File.CreateText(path))
+            {
+
+                sw.WriteLine("0");
+            }
+        }
+            
         using (StreamReader sr = File.OpenText(path))
         {
             string s;
@@ -115,6 +126,33 @@ public class ScoreTracker : MonoBehaviour
                 sw.WriteLine(score);
             }
         }
+
         
     }
+    private void GetScoreAndPopulateLabels()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+
+        int scene_count = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
+        
+        string path = Application.dataPath + "\\" + scene.name + "ScoreSave.txt";
+        if (!File.Exists(path))
+        {
+            using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine("0");
+            }
+        }
+        using (StreamReader sr = File.OpenText(path))
+        {
+            string s;
+            while ((s = sr.ReadLine()) != null)
+            {
+                victoryHighScoreTextLabel.text = "Best Score: " + s;
+                gameOverHighScoreTextLabel.text = "Best Score: " + s;
+            }
+        }
+    }
+    
 }
