@@ -8,7 +8,10 @@ public class UILimbs : MonoBehaviour
 
     public CollisionDamageLerper thisLimb;
     public UnityEngine.UI.Image thisImage;
+    public Material damagedMaterial;
 
+    private bool hasDied = false;
+    private bool hasDiedOnce = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +22,14 @@ public class UILimbs : MonoBehaviour
     void Update()
     {
         thisImage.color = thisLimb.rend.material.color;
+        if(hasDied && !hasDiedOnce)
+        {
+            thisImage.color = damagedMaterial.color;
+            hasDied = true;
+        }
+        if (!hasDiedOnce)
+        {
+            hasDied = thisLimb.isDead;
+        }
     }
 }

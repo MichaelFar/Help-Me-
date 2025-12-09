@@ -1342,6 +1342,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1893188539418818474, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
+    - target: {fileID: 2656406857373276803, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
     - target: {fileID: 2748467091139985611, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1382,6 +1390,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -440
       objectReference: {fileID: 0}
+    - target: {fileID: 5619036584725044376, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
     - target: {fileID: 6352151972059497166, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.025894165
@@ -1428,6 +1440,14 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 6493590331974196733, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
+    - target: {fileID: 6791825475489693717, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
     - target: {fileID: 7292800874651534733, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -1464,6 +1484,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -195
       objectReference: {fileID: 0}
+    - target: {fileID: 7903623509388092866, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
+      propertyPath: damagedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: a860422cce8d6124693ba315a26c3188, type: 2}
     - target: {fileID: 8565988777018969103, guid: b90564e06836ec84d9a92fa71feb226b, type: 3}
       propertyPath: m_Name
       value: PlayerParent
