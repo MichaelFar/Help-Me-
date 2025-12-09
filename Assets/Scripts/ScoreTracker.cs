@@ -98,10 +98,22 @@ public class ScoreTracker : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
         string path = Application.dataPath + "\\" + scene.name + "ScoreSave.txt";
-        
-        using (StreamWriter sw = File.CreateText(path))
+        bool is_higher = false;
+        using (StreamReader sr = File.OpenText(path))
         {
-            sw.WriteLine(score);
+            string s;
+            while ((s = sr.ReadLine()) != null)
+            {
+                is_higher = (float)Convert.ToDouble(s) < (float)Convert.ToDouble(score);
+            }
+        }
+        if (is_higher)
+        {
+            using (StreamWriter sw = File.CreateText(path))
+            {
+
+                sw.WriteLine(score);
+            }
         }
         
     }

@@ -59,7 +59,7 @@ public class MainMenu : MonoBehaviour
             {
                 using (StreamWriter sw = File.CreateText(path))
                 {
-                    sw.WriteLine("High Score: 0");
+                    sw.WriteLine("0");
                 }
             }
             using (StreamReader sr = File.OpenText(path))
