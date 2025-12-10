@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1972830164925269917}
   - component: {fileID: 3681572967769034719}
   - component: {fileID: 2505622991580319295}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1896048838044831822}
   - component: {fileID: 3891133979211089973}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crusher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8892224658847160669}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PointA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 3694449253570413693}
   - component: {fileID: 7686178143283118301}
   - component: {fileID: 5696954000346326666}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8423798435762348283}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PointB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 4037291259475971330}
   - component: {fileID: 5285317907752654977}
   - component: {fileID: 7108488735667068764}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 4503459853836251898}
   - component: {fileID: 7410173844424588743}
   - component: {fileID: 6171038728223644321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CubeParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customDamageOnHit: 100000
-  minimumForceThreshold: 5
   onlyWhenMoving: 1
 --- !u!1 &8693755843070222017
 GameObject:
@@ -516,7 +515,7 @@ GameObject:
   - component: {fileID: 1923756994556399626}
   - component: {fileID: 1881003357925667596}
   - component: {fileID: 338878685285750146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

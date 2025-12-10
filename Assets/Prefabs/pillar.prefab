@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 747294581390353656}
   - component: {fileID: 1349926283427328766}
+  - component: {fileID: 1895337169400373078}
   m_Layer: 0
   m_Name: Collision1
   m_TagString: Untagged
@@ -55,6 +56,20 @@ CapsuleCollider:
   m_Height: 1.2162232
   m_Direction: 2
   m_Center: {x: 0, y: 0.39, z: -0.51}
+--- !u!114 &1895337169400373078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486043117050783177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571d1f6879a42244c8228cd394cd5f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customDamageOnHit: 5
+  onlyWhenMoving: 0
 --- !u!1 &677331324209354736
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,6 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7205285946572062247}
   - component: {fileID: 2143005250190093947}
+  - component: {fileID: 8740398935217434806}
   m_Layer: 0
   m_Name: Collision2
   m_TagString: Untagged
@@ -110,6 +126,20 @@ CapsuleCollider:
   m_Height: 1.2162232
   m_Direction: 2
   m_Center: {x: 0, y: 0.39, z: -0.51}
+--- !u!114 &8740398935217434806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677331324209354736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571d1f6879a42244c8228cd394cd5f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customDamageOnHit: 5
+  onlyWhenMoving: 0
 --- !u!1 &3654314583125556250
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6131668871696838644}
   - component: {fileID: 7254271152377178902}
+  - component: {fileID: 7041444123299383850}
   m_Layer: 0
   m_Name: Collision3
   m_TagString: Untagged
@@ -216,6 +247,20 @@ CapsuleCollider:
   m_Height: 1.2162232
   m_Direction: 2
   m_Center: {x: 0, y: 0.39, z: -0.51}
+--- !u!114 &7041444123299383850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5765929420075062755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571d1f6879a42244c8228cd394cd5f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customDamageOnHit: 5
+  onlyWhenMoving: 0
 --- !u!1 &9206889495603260742
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,9 +49,15 @@ public class DeathVictoryButtons : MonoBehaviour
         gamePaused = false;
 
     }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void Replaying(string kinLevel)
     {
-        SceneManager.LoadScene(kinLevel);
+        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("Worked!");
     }
 

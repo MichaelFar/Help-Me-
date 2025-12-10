@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2255919712793040781}
   - component: {fileID: 7837104196192719304}
   - component: {fileID: 7313108897412306734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hammer (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 49471330587367083}
   - component: {fileID: 7747791028861007823}
   - component: {fileID: 7128368338076972980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hammer (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +253,7 @@ GameObject:
   - component: {fileID: 8139999555260203064}
   - component: {fileID: 2964791877215478017}
   - component: {fileID: 9210028339678386723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 8643452489238924311}
   - component: {fileID: 3004812250840340069}
   - component: {fileID: 7198576439769997839}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 542614833319257924}
   - component: {fileID: 8642573896782015960}
   - component: {fileID: 6144447154839543936}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 5877584506132751782}
   - component: {fileID: 502297910879532869}
   - component: {fileID: 7429941600001569164}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pendulum
   m_TagString: Untagged
   m_Icon: {fileID: 0}

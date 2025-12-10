@@ -10,6 +10,8 @@ public class ForceApplyer : MonoBehaviour
 
     public float forceCooldownSec = 0.3f;
 
+    public Transform parentTransform;
+
     private float timer = 0.0f;
 
     private List<DraggableBody> draggablesInVolume = new List<DraggableBody>();
@@ -57,7 +59,7 @@ public class ForceApplyer : MonoBehaviour
     }
     private void ApplyForceToDraggable(DraggableBody draggable)
     {
-        Vector3 direction_to_fan = transform.eulerAngles.normalized;
+        Vector3 direction_to_fan = transform.position - parentTransform.position;
         direction_to_fan = direction_to_fan.normalized;
         draggable.GetComponent<Rigidbody>().AddForce(direction_to_fan * forceMagnitude * Time.deltaTime);
         //print("Applying force to " + draggable.gameObject);
